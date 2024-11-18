@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 #include <unistd.h>
 
 void    ft_putendl_fd(char *s, int fd)
@@ -24,4 +24,11 @@ void    ft_putendl_fd(char *s, int fd)
         i++;
     }
     write(fd, '\n', 1);
+}
+
+int main(int argc, char **argv)
+{
+    argc = 0;
+    ft_putendl_fd(argv[1], 1);
+    return (0);
 }
